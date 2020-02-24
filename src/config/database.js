@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const {user, password} = require('./credentials')
 
-const url = 'mongodb+srv://usuario_admin:everton3b@cluster0-lqciw.mongodb.net/twitters?retryWrites=true&w=majority'
+const url = `mongodb+srv://${user}:${password}@cluster0-lqciw.mongodb.net/twitters?retryWrites=true&w=majority`
 const options = { useUnifiedTopology: true, useNewUrlParser: true }
 
 mongoose.connect(url, options);
