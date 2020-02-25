@@ -43,12 +43,12 @@ module.exports = {
         }else {
             const {name, email, password } = req.body
 
-            newPassword = await bcrypt.hash(req.body.password, 10)
+            // newPassword = await bcrypt.hash(req.body.password, 10)
 
             const {id} = await User.create({
                 name: name,
                 email: email,
-                password: newPassword
+                password: password
             })
 
             return res.json({
